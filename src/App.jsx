@@ -6,6 +6,7 @@ import { MyProvider } from './utils/contextProvider';
 import { Header } from './layouts/header';
 import { Footer } from './layouts/footer';
 import { VehiclesPage } from './pages/Vehicles/vehicles';
+import { DetailPage } from './pages/detail/detailpage';
 function App() {
   return (
     <MyProvider>
@@ -13,7 +14,8 @@ function App() {
       <Routes >
         <Route path='/' element={<HomePage />} />
         <Route path='/vehicles' element = {<VehiclesPage/>}/>
-        <Route path='/' element={<AboutPage />} />
+        <Route path='/details' element={<DetailPage/>}/>
+        <Route path='/about' element={<AboutPage />} />
       </Routes >
       <Footer/>
     </MyProvider>
