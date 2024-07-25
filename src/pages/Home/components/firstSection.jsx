@@ -6,6 +6,11 @@ import carHero from '../../../assets/img/car-hero.png';
 import carHero2 from '../../../assets/img/car-hero2.png';
 export const FirstSection = () => {
     const [test, setTest] = useContext(MyContext)
+
+
+
+
+    
     return (
         <div className='bg-[#5937e0] mx-20 p-10 py-20 rounded-3xl flex items-center relative overflow-hidden '>
             <img className=' absolute bottom-[5%] left-[33%]' src={carHero2} width={450} alt="" srcset="" />

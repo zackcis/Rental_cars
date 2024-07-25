@@ -54,12 +54,8 @@ export const OtherCarSection = () => {
                 <p className="flex items-center gap-2 font-bold text-2xl">View All <FaLongArrowAltRight />  </p>
             </div>
 
-
-
             <div className="card-container w-[100%] flex flex-wrap gap-9 justify-center">
                 {cars.map((element, index) =>
-
-
 
                     <div key={index} className="card w-[30%] bg-[#fafafa] flex flex-col justify-center gap-9 rounded-lg p-3">
                         <img className="rounded-lg" src={element.img} alt="" srcset="" />
@@ -80,7 +76,6 @@ export const OtherCarSection = () => {
                         </div>
                         <button className="w-[90%] bg-[#5937e0] rounded-lg self-center p-2 text-white"><b>View details</b></button>
                     </div>
-
 
 
                 )}

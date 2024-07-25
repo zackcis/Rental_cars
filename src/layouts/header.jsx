@@ -3,6 +3,7 @@ import { FaCar } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaSquarePhone } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 
 
@@ -26,11 +27,13 @@ export const Header = () => {
             </div>
 
             <div className="flex justify-around  w-[45%] items-center">
-                <p>Home</p>
-                <p>vehicles</p>
-                <p>Details</p>
-                <p>About Us</p>
-                <p>Contact Us</p>
+    
+                <Link to="/">Home</Link>
+                <Link to="/vehicles">Vehicles</Link>
+                <Link to="/details">Details</Link>
+                <Link to="/aboutus">aboutus</Link>
+                <Link to="/contactus">contactus</Link>
+
             </div>
 
             <div className="flex items-center gap-3">
