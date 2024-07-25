@@ -58,10 +58,10 @@ export const CardSection = () => {
 
 
     return (
-        <div className="mx-28 p-5 ">
+        <div className="mx-20 p-2  my-12">
             <div className="flex justify-between">
                 <h3 className="text-4xl font-bold w-[38%] p-10">Choose the car that suits you</h3>
-                <p className="flex items-center gap-2 ">view All <FaLongArrowAltRight />  </p>
+                <p className="flex items-center gap-2 font-bold text-2xl">View All <FaLongArrowAltRight />  </p>
             </div>
 
 
@@ -71,7 +71,7 @@ export const CardSection = () => {
 
 
 
-                <div key={index} className="card w-[30%] bg-[#fafafa] flex flex-col justify-center gap-5 rounded-lg p-3">
+                <div key={index} className="card w-[30%] bg-[#fafafa] flex flex-col justify-center gap-9 rounded-lg p-3">
                     <img className="rounded-lg" src={element.img} alt="" srcset="" />
                     <div className="flex justify-between ">
                         <div className="flex flex-col gap-1">
@@ -88,7 +88,7 @@ export const CardSection = () => {
                         <p className="flex items-center gap-2"><MdOilBarrel className="text-xl" /> Pb 95</p>
                         <p className="flex items-center gap-2"><IoSnow className="text-xl" /> Air Conditioner</p>
                     </div>
-                    <button className="w-[100%] bg-[#5937e0] rounded-lg self-center p-2 text-white"><b>View details</b></button>
+                    <button className="w-[90%] bg-[#5937e0] rounded-lg self-center p-2 text-white"><b>View details</b></button>
                 </div>
 
 

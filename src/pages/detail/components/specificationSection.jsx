@@ -10,10 +10,10 @@ export const SpecificationSection = () => {
 
     return (
 
-        <div className="mx-28 p-10 flex">
+        <div className="mx-20 p-5 py-10 flex">
             <div className="flex flex-col gap-10 w-[50%]">
-                <h2 className="font-bold text-2xl">BMW</h2>
-                <p><span className="font-bold text-[#5937e0] text-2xl">$25</span>/ day</p>
+                <h2 className="font-bold text-4xl">BMW</h2>
+                <p><span className="font-bold text-[#5937e0] text-3xl">$25</span>/ day</p>
                 <div className="flex justify-center items-center">
                     <svg className="w-[80%] h-fit " version="1.0" xmlns="http://www.w3.org/2000/svg"
                         width="1280.000000pt" height="640.000000pt" viewBox="0 0 1280.000000 640.000000"

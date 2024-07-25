@@ -14,10 +14,10 @@ export const NumbersSection = () => {
 
 
     return (
-        <div className="mx-28 bg-[#5937e0] p-10 rounded-3xl flex flex-col gap-4 justify-center items-center relative pb-32 overflow-hidden">
+        <div className="mx-20 bg-[#5937e0] p-10 rounded-3xl flex flex-col gap-4 justify-center items-center relative pb-32 overflow-hidden">
 
 
-            <svg className=" absolute w-[50%] h-fit top-[40%]" version="1.0" xmlns="http://www.w3.org/2000/svg"
+            <svg className=" absolute w-[50%] h-fit top-[35%]" version="1.0" xmlns="http://www.w3.org/2000/svg"
                 width="1280.000000pt" height="640.000000pt" viewBox="0 0 1280.000000 640.000000"
                 preserveAspectRatio="xMidYMid meet">
                 <g className="shadow" transform="translate(0.000000,640.000000) scale(0.100000,-0.100000)"
@@ -440,11 +440,11 @@ export const NumbersSection = () => {
                 <path d="M634.708 437.632C634.957 437.042 635.198 436.517 635.424 436.062C635.496 436.188 635.589 436.292 635.706 436.378C635.435 436.875 635.176 437.368 634.929 437.865L634.708 437.632Z" fill="black" fill-opacity="0.1" />
             </svg>
 
-            <h1 className="text-4xl text-white text-center font-bold">Facts In Numbers</h1>
+            <h1 className="text-5xl text-white text-center font-bold">Facts In Numbers</h1>
             <p className="text-white text-center mb-16 w-[60%]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi maxime blanditiis
                 deserunt tempora dolore a soluta odit repudiandae molestias aperiam amet ducimus
                 consectetur commodi, itaque nisi quaerat voluptates cumque iusto!</p>
-            <div className="flex justify-around items-center gap-20 z-30">
+            <div className="flex justify-around items-center gap-20 z-30 w-[100%]">
                 <div className="flex gap-3 justify-center items-center bg-white p-3 pr-16 rounded-2xl">
                     <div className="p-3 bg-[#ff9e0c]  rounded-xl">
                         <IoCarOutline className="text-white bg-[#ff9e0c] text-4xl " />

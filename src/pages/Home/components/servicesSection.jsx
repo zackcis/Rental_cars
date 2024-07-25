@@ -5,7 +5,7 @@ import carShow from '../../../assets/img/pexels-tkirkgoz-19362988.jpg';
 export const ServicesSection = () => {
 
     return (
-        <div className="mx-28 flex justify-between items-center p-10">
+        <div className="mx-20 flex justify-around items-center p-10">
             <div className="p-4  flex justify-center w-[45%]">
                 <img className="rounded-xl" src={carShow} width={500} alt="" srcset="" />
             </div>
