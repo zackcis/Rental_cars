@@ -7,6 +7,7 @@ import { Header } from './layouts/header';
 import { Footer } from './layouts/footer';
 import { VehiclesPage } from './pages/Vehicles/vehicles';
 import { DetailPage } from './pages/detail/detailpage';
+import { ContactUsPage } from './pages/contactUs/contactUsPage';
 function App() {
   return (
     <MyProvider>
@@ -16,6 +17,7 @@ function App() {
         <Route path='/vehicles' element = {<VehiclesPage/>}/>
         <Route path='/details' element={<DetailPage/>}/>
         <Route path='/about' element={<AboutPage />} />
+        <Route path='/contactus' element={<ContactUsPage/>}/>
       </Routes >
       <Footer/>
     </MyProvider>
