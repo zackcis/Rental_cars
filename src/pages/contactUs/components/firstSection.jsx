@@ -51,7 +51,7 @@ export const FirstSection = () => {
                 {/* z-10 w-[30%] h-[100%]  flex justify-center items-center */}
                 <div className='z-10 lg:w-[40%] flex justify-center items-center '>
                     <div className=' p-10 lg:w-[80%]  rounded-2xl flex flex-col justify-center items-center gap-6 bg-[#5937e0]'>
-                        <h1 className='font-bold text-2xl'>Book Your Car</h1>
+                        <h1 className='font-bold text-2xl text-white'>Book Your Car</h1>
                         <div onClick={toggleDropdown} className='bg-[#694be3] w-[100%] p-1 flex justify-between items-center  rounded-lg dropdown-btn text-white'>
                             <p className='ml-3'><span>{selecteditem}</span></p>
                             <svg className={`text-white mr-3  ${dropdownVisible ? 'rotate-180' : null}`} width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
