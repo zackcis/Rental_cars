@@ -5,7 +5,7 @@ export const PartnerSection = () => {
 
 
     return (
-        <div className="mx-20 flex justify-around bg-[#f9f8f8] rounded-full p-16 my-14">
+        <div className="mx-20 flex max-[430px]:flex-col max-[430px]:gap-14 max-[430px]:items-center justify-around bg-[#f9f8f8] rounded-full p-16 my-14">
             <div>
                 <svg width="82" height="54" viewBox="0 0 82 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1_4313)">

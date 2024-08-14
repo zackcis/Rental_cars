@@ -4,9 +4,9 @@ import car from '../../../assets/img/car-hero2.png'
 export const BookingSection = () => {
 
     return (
-        <div className="mx-20 my-28 p-14 bg-[#5937e0] rounded-3xl flex justify-around items-center overflow-hidden">
+        <div className="lg:mx-20 my-28 p-14 bg-[#5937e0] rounded-3xl flex justify-around items-center overflow-hidden">
             <div className="flex flex-col gap-7 relative">
-                <svg className="absolute z-0 -left-32 -top-24" width="900" height="250" viewBox="0 0 695 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="max-[430px]:hidden absolute z-0 -left-32 -top-24" width="900" height="250" viewBox="0 0 695 168" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M664.756 140.091C665.11 140.129 664.983 139.695 665.036 139.618C664.444 139.713 664.771 140.203 664.756 140.091Z" fill="black" fill-opacity="0.1" />
                     <path d="M658.906 141.075L659.009 140.898L658.148 141.331L658.906 141.075Z" fill="black" fill-opacity="0.1" />
                     <path d="M653.445 141.067C653.961 141.806 655.425 140.948 656.398 141.211L656.558 141.379L656.997 140.785C655.815 140.878 654.278 141.273 653.445 141.067Z" fill="black" fill-opacity="0.1" />
@@ -432,9 +432,9 @@ export const BookingSection = () => {
                 <h1 className="font-bold text-6xl text-white z-10">Looking for a car?</h1>
                 <p className="font-bold text-3xl text-white z-10">+212 69931-2362</p>
                 <p className="text-white z-10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum?</p>
-                <button className="bg-[#ff9e0c] w-[40%] font-bold text-xl text-white p-4 rounded-3xl">Book now</button>
+                <button className="bg-[#ff9e0c] lg:w-[40%] font-bold text-xl text-white p-4 rounded-3xl">Book now</button>
             </div>
-            <div className="z-10">
+            <div className="z-10 max-[430px]:hidden">
                 <img src={car} width={500} alt="" />
             </div>
         </div>

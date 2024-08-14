@@ -5,9 +5,9 @@ export const SearchSection = () => {
 
 
     return (
-        <div className="mx-20 my-14 bg-[#5937e0] p-10 rounded-xl flex overflow-hidden  ">
-            <div className="flex flex-col  relative justify-around ml-9 ">
-                <svg className="absolute z-0 bottom-40 right-6 h-fit" width="1000" height="209" viewBox="0 0 771 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className="lg:mx-20 my-14 bg-[#5937e0] p-5 lg:p-10 rounded-xl flex max-[430px]:flex-col  overflow-hidden  ">
+            <div className="flex flex-col  relative justify-around lg:ml-9 max-[430px]:gap-5">
+                <svg className="max-[430px]:hidden absolute z-0 bottom-40 right-6 h-fit" width="1000" height="209" viewBox="0 0 771 209" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M740.756 140.091C741.11 140.129 740.983 139.695 741.036 139.618C740.444 139.713 740.771 140.203 740.756 140.091Z" fill="black" fill-opacity="0.1" />
                     <path d="M734.906 141.075L735.009 140.898L734.148 141.331L734.906 141.075Z" fill="black" fill-opacity="0.1" />
                     <path d="M729.445 141.067C729.961 141.806 731.425 140.948 732.398 141.211L732.558 141.379L732.997 140.785C731.815 140.878 730.278 141.273 729.445 141.067Z" fill="black" fill-opacity="0.1" />
@@ -462,9 +462,9 @@ export const SearchSection = () => {
                     <path d="M683.297 138.642C683.345 138.003 683.405 137.429 683.473 136.925C683.582 137.021 683.703 137.09 683.842 137.134C683.744 137.692 683.656 138.242 683.581 138.792L683.297 138.642Z" fill="black" fill-opacity="0.1" />
                 </svg>
 
-                <h1 className="font-bold text-6xl text-white  z-10">Enjoy every mile with adorable companionship</h1>
+                <h1 className="font-bold lg:text-6xl text-4xl text-white  z-10">Enjoy every mile with adorable companionship</h1>
                 <p className="text-white w-[80%] z-10 ">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam.</p>
-                <div className="p-2 bg-white flex justify-between items-center w-[50%] rounded-2xl">
+                <div className="p-2 bg-white flex justify-between items-center lg:w-[50%] rounded-2xl gap-5">
                     <input className="" placeholder="City" type="text" />
                     <button className="bg-[#ff9e0c] p-2 w-[120px] rounded-2xl text-white"><b>Search</b></button>
                 </div>

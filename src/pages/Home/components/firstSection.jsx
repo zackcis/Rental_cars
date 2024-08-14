@@ -1,20 +1,53 @@
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import './firstSection.sass';
 import { MyContext } from '../../../utils/contextProvider';
 import carHero from '../../../assets/img/car-hero.png';
 import carHero2 from '../../../assets/img/car-hero2.png';
 export const FirstSection = () => {
-    const [test, setTest] = useContext(MyContext)
+    // const [test, setTest] = useContext(MyContext);
+    const [dropdownVisible, setDropdownVisible] = useState(false);
+    const [dropdownVisible3, setDropdownVisible3] = useState(false)
+    const [dropdownVisible2, setDropdownVisible2] = useState(false)
+    const [selecteditem, setSelecteditem] = useState('Car Type')
+    const [selecteditem2, setSelecteditem2] = useState('Place Of Rental')
+    const [selecteditem3, setSelecteditem3] = useState('Place Of Return')
+
+    const dropdown = document.querySelector('.dropdown-content')
 
 
+    console.log(dropdown);
+
+    const toggleDropdown = () => {
+        setDropdownVisible(!dropdownVisible)
+    }
+    const selectitem = (item) => {
+        setSelecteditem(item)
+        toggleDropdown()
+    }
+    const toggleDropdown3 = () => {
+        setDropdownVisible3(!dropdownVisible3)
+    }
+    const selectitem3 = (item) => {
+        setSelecteditem3(item)
+        toggleDropdown3()
+    }
+    const toggleDropdown2 = () => {
+        setDropdownVisible2(!dropdownVisible2)
+    }
+    const selectitem2 = (item) => {
+        setSelecteditem2(item)
+        toggleDropdown2()
+    }
+
+    const carsType = ['Mercedece', 'BMW', 'Audi', 'Fiat', 'Citroen', 'KIA']
+    const places = ['Casablanca', 'Rabat', 'Marrakech', 'Eljadida',]
 
 
-    
     return (
-        <div className='bg-[#5937e0] mx-20 p-10 py-20 rounded-3xl flex items-center relative overflow-hidden '>
-            <img className=' absolute bottom-[5%] left-[33%]' src={carHero2} width={450} alt="" srcset="" />
-            <svg className='w-[100%] mt-10 left-3 absolute z-0' width="1500" height="800" viewBox="0 0 1296 660" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className='bg-[#5937e0] lg:mx-20 max-[430px]:p-5 max-[430px]:gap-5 lg:p-10 py-20 rounded-3xl flex max-[430px]:flex-col items-center relative overflow-hidden '>
+            <img className=' absolute bottom-[5%] left-[33%] max-[430px]:hidden' src={carHero2} width={450} alt="" srcset="" />
+            <svg className='w-[100%] mt-10 left-3 absolute z-0 max-[430px]:hidden' width="1500" height="800" viewBox="0 0 1296 660" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M80.5246 215.804C80.0859 216.707 79.155 214.419 79.126 216.361C79.1552 216.259 78.8736 215.289 78.5907 215.168C78.5576 215.289 78.5016 215.361 78.381 215.253C78.448 215.146 78.5187 215.138 78.5907 215.168C78.6549 214.932 78.6336 214.496 78.8041 214.708C78.7098 214.119 78.1153 213.723 78.0622 214.211L78.23 214.545L77.7673 214.014C77.8047 214.489 77.955 214.586 78.0286 214.939L77.6843 215.833C77.7726 216.011 77.8743 216.387 77.9134 216.796C78.8315 216.682 79.711 216.571 80.5366 216.466L80.5246 215.804Z" fill="#232323" fill-opacity="0.1" />
                 <path d="M74.081 217.265C74.0566 217.243 74.0321 217.226 74.0078 217.194L74.0103 217.274C74.0343 217.271 74.057 217.268 74.081 217.265Z" fill="#232323" fill-opacity="0.1" />
                 <path d="M74.5839 217.123C74.68 217.157 74.7822 217.169 74.8857 217.176C75.4062 217.111 75.9173 217.048 76.4192 216.987C76.1974 216.823 75.9964 216.597 75.9241 216.448C75.3622 217.499 74.4189 215.207 74.5839 217.123Z" fill="#232323" fill-opacity="0.1" />
@@ -1529,33 +1562,51 @@ export const FirstSection = () => {
                 <path d="M1136.37 477.4C1136.12 477.117 1135.86 476.848 1135.6 476.602C1135.71 476.982 1135.7 477.473 1135.83 477.875L1136.37 477.4Z" fill="#232323" fill-opacity="0.1" />
             </svg>
 
-            <div className='z-10 flex flex-col gap-10 w-[55%] '>
+            <div className='z-10 flex flex-col gap-10 lg:w-[55%] '>
                 <h1 className='text-7xl font-bold text-white'>Experience the road like never before</h1>
-                <p className='text-white w-[67%]'>Optio explicabo aspernatur voluptates deleniti officiis enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatibus cumque qui enim sit sed!</p>
-                <button className='bg-[#ff9e0c] text-white font-bold w-[25%] py-2 rounded-2xl'>View all cars</button>
+                <p className='text-white max-[430px]:w-[80%] w-[67%]'>Optio explicabo aspernatur voluptates deleniti officiis enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatibus cumque qui enim sit sed!</p>
+                <button className='bg-[#ff9e0c] text-white font-bold max-[430px]:w-[60%] lg:w-[25%] py-2 rounded-2xl'>View all cars</button>
             </div>
-            <div className='z-10 w-[40%] flex justify-center items-center '>
-                <div className='bg-white p-10 w-[80%] rounded-2xl flex flex-col justify-center items-center gap-6'>
+            <div className='z-10 lg:w-[40%] max-[430px]:w-[100%] flex justify-center items-center '>
+                <div className='bg-white p-10 lg:w-[80%] max-[430px]:w-[100%] rounded-2xl flex flex-col justify-center items-center gap-6'>
                     <h1 className='font-bold text-2xl'>Book Your Car</h1>
-                    <div className='bg-[#f9f8f8] w-[100%] p-1 flex justify-between items-center  rounded-lg'>
-                        <p className='ml-3'><span>Car Type</span></p>
+                    <div onClick={toggleDropdown} className='bg-[#f9f8f8] w-[100%] p-1 flex justify-between items-center relative rounded-lg dropdown-btn'>
+                        <p className='ml-3'><span>{selecteditem}</span></p>
+                        <svg className={`mr-3 ${dropdownVisible ? 'rotate-180' : null}`} width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.64592 5.14592C1.69236 5.09935 1.74754 5.06241 1.80828 5.0372C1.86903 5.012 1.93415 4.99902 1.99992 4.99902C2.06568 4.99902 2.13081 5.012 2.19155 5.0372C2.2523 5.06241 2.30747 5.09935 2.35392 5.14592L7.99992 10.7929L13.6459 5.14592C13.6924 5.09943 13.7476 5.06255 13.8083 5.03739C13.8691 5.01223 13.9342 4.99929 13.9999 4.99929C14.0657 4.99929 14.1308 5.01223 14.1915 5.03739C14.2522 5.06255 14.3074 5.09943 14.3539 5.14592C14.4004 5.1924 14.4373 5.24759 14.4624 5.30833C14.4876 5.36907 14.5005 5.43417 14.5005 5.49992C14.5005 5.56566 14.4876 5.63076 14.4624 5.6915C14.4373 5.75224 14.4004 5.80743 14.3539 5.85392L8.35392 11.8539C8.30747 11.9005 8.2523 11.9374 8.19155 11.9626C8.13081 11.9878 8.06568 12.0008 7.99992 12.0008C7.93415 12.0008 7.86903 11.9878 7.80828 11.9626C7.74754 11.9374 7.69236 11.9005 7.64592 11.8539L1.64592 5.85392C1.59935 5.80747 1.56241 5.7523 1.5372 5.69155C1.512 5.63081 1.49902 5.56568 1.49902 5.49992C1.49902 5.43415 1.512 5.36903 1.5372 5.30828C1.56241 5.24754 1.59935 5.19236 1.64592 5.14592Z" fill="black" />
+                        </svg>
+                    </div>
+                    <div className={`z-10  bg-[#f9f8f8] flex flex-col dropdown-content absolute lg:top-[30%] p-0 m-0 rounded-lg  ${!dropdownVisible ? 'hidden' : null}`}>
+                        {carsType.map((element, index) => (
+                            <p key={index} onClick={() => selectitem(element)} className='rounded-lg p-2'>
+                                {element}
+                            </p>
+                        ))}
+                    </div>
+                    <div onClick={toggleDropdown2} className='bg-[#f9f8f8] w-[100%] p-1 rounded-lg flex justify-between items-center dropdown-btn2'>
+                        <p className='ml-3'><span>{selecteditem2}</span></p>
+                        <svg className='mr-3' width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.64592 5.14592C1.69236 5.09935 1.74754 5.06241 1.80828 5.0372C1.86903 5.012 1.93415 4.99902 1.99992 4.99902C2.06568 4.99902 2.13081 5.012 2.19155 5.0372C2.2523 5.06241 2.30747 5.09935 2.35392 5.14592L7.99992 10.7929L13.6459 5.14592C13.6924 5.09943 13.7476 5.06255 13.8083 5.03739C13.8691 5.01223 13.9342 4.99929 13.9999 4.99929C14.0657 4.99929 14.1308 5.01223 14.1915 5.03739C14.2522 5.06255 14.3074 5.09943 14.3539 5.14592C14.4004 5.1924 14.4373 5.24759 14.4624 5.30833C14.4876 5.36907 14.5005 5.43417 14.5005 5.49992C14.5005 5.56566 14.4876 5.63076 14.4624 5.6915C14.4373 5.75224 14.4004 5.80743 14.3539 5.85392L8.35392 11.8539C8.30747 11.9005 8.2523 11.9374 8.19155 11.9626C8.13081 11.9878 8.06568 12.0008 7.99992 12.0008C7.93415 12.0008 7.86903 11.9878 7.80828 11.9626C7.74754 11.9374 7.69236 11.9005 7.64592 11.8539L1.64592 5.85392C1.59935 5.80747 1.56241 5.7523 1.5372 5.69155C1.512 5.63081 1.49902 5.56568 1.49902 5.49992C1.49902 5.43415 1.512 5.36903 1.5372 5.30828C1.56241 5.24754 1.59935 5.19236 1.64592 5.14592Z" fill="black" />
+                        </svg>
+                    </div>
+                    <div className={`z-10  bg-[#f9f8f8] flex flex-col dropdown-content2 rounded-lg  ${!dropdownVisible2 ? 'hidden' : null}`}>
+                        {places.map((element, index) => (
+                            <p onClick={() => selectitem2(element)} key={index} className='rounded-lg p-2'>{element}</p>
+                        ))}
+                    </div>
+                    <div onClick={toggleDropdown3} className='bg-[#f9f8f8] w-[100%]  p-1 rounded-lg flex justify-between items-center relative dropdown-btn3'>
+                        <p className='ml-3'><span>{selecteditem3}</span></p>
                         <svg className='mr-3' width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M1.64592 5.14592C1.69236 5.09935 1.74754 5.06241 1.80828 5.0372C1.86903 5.012 1.93415 4.99902 1.99992 4.99902C2.06568 4.99902 2.13081 5.012 2.19155 5.0372C2.2523 5.06241 2.30747 5.09935 2.35392 5.14592L7.99992 10.7929L13.6459 5.14592C13.6924 5.09943 13.7476 5.06255 13.8083 5.03739C13.8691 5.01223 13.9342 4.99929 13.9999 4.99929C14.0657 4.99929 14.1308 5.01223 14.1915 5.03739C14.2522 5.06255 14.3074 5.09943 14.3539 5.14592C14.4004 5.1924 14.4373 5.24759 14.4624 5.30833C14.4876 5.36907 14.5005 5.43417 14.5005 5.49992C14.5005 5.56566 14.4876 5.63076 14.4624 5.6915C14.4373 5.75224 14.4004 5.80743 14.3539 5.85392L8.35392 11.8539C8.30747 11.9005 8.2523 11.9374 8.19155 11.9626C8.13081 11.9878 8.06568 12.0008 7.99992 12.0008C7.93415 12.0008 7.86903 11.9878 7.80828 11.9626C7.74754 11.9374 7.69236 11.9005 7.64592 11.8539L1.64592 5.85392C1.59935 5.80747 1.56241 5.7523 1.5372 5.69155C1.512 5.63081 1.49902 5.56568 1.49902 5.49992C1.49902 5.43415 1.512 5.36903 1.5372 5.30828C1.56241 5.24754 1.59935 5.19236 1.64592 5.14592Z" fill="black" />
                         </svg>
                     </div>
 
-                    <div className='bg-[#f9f8f8] w-[100%] p-1 rounded-lg flex justify-between items-center'>
-                        <p className='ml-3'><span>Place Of Rental</span></p>
-                        <svg className='mr-3' width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.64592 5.14592C1.69236 5.09935 1.74754 5.06241 1.80828 5.0372C1.86903 5.012 1.93415 4.99902 1.99992 4.99902C2.06568 4.99902 2.13081 5.012 2.19155 5.0372C2.2523 5.06241 2.30747 5.09935 2.35392 5.14592L7.99992 10.7929L13.6459 5.14592C13.6924 5.09943 13.7476 5.06255 13.8083 5.03739C13.8691 5.01223 13.9342 4.99929 13.9999 4.99929C14.0657 4.99929 14.1308 5.01223 14.1915 5.03739C14.2522 5.06255 14.3074 5.09943 14.3539 5.14592C14.4004 5.1924 14.4373 5.24759 14.4624 5.30833C14.4876 5.36907 14.5005 5.43417 14.5005 5.49992C14.5005 5.56566 14.4876 5.63076 14.4624 5.6915C14.4373 5.75224 14.4004 5.80743 14.3539 5.85392L8.35392 11.8539C8.30747 11.9005 8.2523 11.9374 8.19155 11.9626C8.13081 11.9878 8.06568 12.0008 7.99992 12.0008C7.93415 12.0008 7.86903 11.9878 7.80828 11.9626C7.74754 11.9374 7.69236 11.9005 7.64592 11.8539L1.64592 5.85392C1.59935 5.80747 1.56241 5.7523 1.5372 5.69155C1.512 5.63081 1.49902 5.56568 1.49902 5.49992C1.49902 5.43415 1.512 5.36903 1.5372 5.30828C1.56241 5.24754 1.59935 5.19236 1.64592 5.14592Z" fill="black" />
-                        </svg>
+                    <div className={`z-10  bg-[#f9f8f8] flex flex-col dropdown-content3 rounded-lg  ${!dropdownVisible3 ? 'hidden' : null}`}>
+                        {places.map((element, index) => (
+                            <p onClick={() => selectitem3(element)} key={index} className='rounded-lg p-2'>{element}</p>
+                        ))}
                     </div>
-                    <div className='bg-[#f9f8f8] w-[100%] p-1 rounded-lg flex justify-between items-center'>
-                        <p className='ml-3'><span>Place Of Return</span></p>
-                        <svg className='mr-3' width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.64592 5.14592C1.69236 5.09935 1.74754 5.06241 1.80828 5.0372C1.86903 5.012 1.93415 4.99902 1.99992 4.99902C2.06568 4.99902 2.13081 5.012 2.19155 5.0372C2.2523 5.06241 2.30747 5.09935 2.35392 5.14592L7.99992 10.7929L13.6459 5.14592C13.6924 5.09943 13.7476 5.06255 13.8083 5.03739C13.8691 5.01223 13.9342 4.99929 13.9999 4.99929C14.0657 4.99929 14.1308 5.01223 14.1915 5.03739C14.2522 5.06255 14.3074 5.09943 14.3539 5.14592C14.4004 5.1924 14.4373 5.24759 14.4624 5.30833C14.4876 5.36907 14.5005 5.43417 14.5005 5.49992C14.5005 5.56566 14.4876 5.63076 14.4624 5.6915C14.4373 5.75224 14.4004 5.80743 14.3539 5.85392L8.35392 11.8539C8.30747 11.9005 8.2523 11.9374 8.19155 11.9626C8.13081 11.9878 8.06568 12.0008 7.99992 12.0008C7.93415 12.0008 7.86903 11.9878 7.80828 11.9626C7.74754 11.9374 7.69236 11.9005 7.64592 11.8539L1.64592 5.85392C1.59935 5.80747 1.56241 5.7523 1.5372 5.69155C1.512 5.63081 1.49902 5.56568 1.49902 5.49992C1.49902 5.43415 1.512 5.36903 1.5372 5.30828C1.56241 5.24754 1.59935 5.19236 1.64592 5.14592Z" fill="black" />
-                        </svg>
-                    </div>
+
                     <div className='bg-[#f9f8f8] w-[100%] p-1 rounded-lg flex justify-between items-center'>
                         <p className='ml-3'><span>Rental Date</span></p>
                         <svg className='mr-3' width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">

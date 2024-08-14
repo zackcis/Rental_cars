@@ -7,8 +7,8 @@ import { CiPhone } from "react-icons/ci";
 export const ContactSection = () => {
 
     return (
-        <div className="mx-20 p-4 my-9">
-            <div className="flex justify-between mb-[5%]">
+        <div className="lg:mx-20 p-4 my-9 max-[430px]:flex max-[430px]:justify-center max-[430px]:items-center">
+            <div className="flex max-[430px]:flex-col max-[430px]:gap-7 justify-between max-[430px]:justify-center  mb-[5%]">
 
                 <div className="flex items-center gap-2 ">
                     <div className="bg-[#ff9e0c] p-2 rounded-full">

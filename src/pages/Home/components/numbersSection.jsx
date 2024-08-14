@@ -14,10 +14,10 @@ export const NumbersSection = () => {
 
 
     return (
-        <div className="mx-20 bg-[#5937e0] p-10 rounded-3xl flex flex-col gap-4 justify-center items-center relative pb-32 overflow-hidden">
+        <div className="lg:mx-20 bg-[#5937e0] lg:p-10 p-5 rounded-3xl flex flex-col gap-4 justify-center items-center relative lg:pb-32 overflow-hidden">
 
 
-            <svg className=" absolute w-[50%] h-fit top-[35%]" version="1.0" xmlns="http://www.w3.org/2000/svg"
+            <svg className="max-[430px]:hidden absolute w-[50%] h-fit top-[35%]" version="1.0" xmlns="http://www.w3.org/2000/svg"
                 width="1280.000000pt" height="640.000000pt" viewBox="0 0 1280.000000 640.000000"
                 preserveAspectRatio="xMidYMid meet">
                 <g className="shadow" transform="translate(0.000000,640.000000) scale(0.100000,-0.100000)"
@@ -49,7 +49,7 @@ export const NumbersSection = () => {
                         284z"/>
                 </g>
             </svg>
-            <svg className="drift text-[#472cb2] absolute left-0 w-[60%]  " width="747" height="900" viewBox="0 0 747 486" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="drift max-[430px]:hidden text-[#472cb2] absolute left-0 w-[60%]  " width="747" height="900" viewBox="0 0 747 486" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M539.631 463.885L539.196 463.861C539.396 463.891 539.529 463.894 539.631 463.885Z" fill="black" fill-opacity="0.1" />
                 <path d="M542.507 464.884L542.641 464.716C542.473 464.776 542.392 464.835 542.507 464.884Z" fill="black" fill-opacity="0.1" />
                 <path d="M597.31 478.051C596.852 477.493 596.395 476.712 596.318 477.172L596.352 477.658C596.783 477.717 597.077 477.87 597.31 478.051Z" fill="black" fill-opacity="0.1" />
@@ -441,11 +441,11 @@ export const NumbersSection = () => {
             </svg>
 
             <h1 className="text-5xl text-white text-center font-bold">Facts In Numbers</h1>
-            <p className="text-white text-center mb-16 w-[60%]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi maxime blanditiis
+            <p className="text-white text-center lg:mb-16 lg:w-[60%]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi maxime blanditiis
                 deserunt tempora dolore a soluta odit repudiandae molestias aperiam amet ducimus
                 consectetur commodi, itaque nisi quaerat voluptates cumque iusto!</p>
-            <div className="flex justify-around items-center gap-20 z-30 w-[100%]">
-                <div className="flex gap-3 justify-center items-center bg-white p-3 pr-16 rounded-2xl">
+            <div className="flex max-[430px]:flex-col justify-around items-center gap-10 lg:gap-20 z-30 w-[100%]">
+                <div className="flex gap-3 justify-center items-center bg-white p-3 pr-16 rounded-2xl max-[430px]:w-[60%]">
                     <div className="p-3 bg-[#ff9e0c]  rounded-xl">
                         <IoCarOutline className="text-white bg-[#ff9e0c] text-4xl " />
                     </div>
@@ -454,7 +454,7 @@ export const NumbersSection = () => {
                         <p>cars</p>
                     </div>
                 </div>
-                <div className="flex gap-3 justify-center items-center bg-white p-3 pr-16 rounded-2xl">
+                <div className="flex gap-3 justify-center items-center bg-white p-3 pr-16 rounded-2xl max-[430px]:w-[60%]">
                     <div className="p-3 bg-[#ff9e0c]  rounded-xl">
                         <RiUserHeartLine className="text-white bg-[#ff9e0c] text-4xl " />
                     </div>
@@ -463,7 +463,7 @@ export const NumbersSection = () => {
                         <p>Customer</p>
                     </div>
                 </div>
-                <div className="flex gap-3 justify-center items-center bg-white p-3 pr-16 rounded-2xl">
+                <div className="flex gap-3 justify-center items-center bg-white p-3 pr-16 rounded-2xl max-[430px]:w-[60%]">
                     <div className="p-3 bg-[#ff9e0c]  rounded-xl">
                         <FaRegCalendarCheck className="text-white bg-[#ff9e0c] text-4xl " />
                     </div>
@@ -472,7 +472,7 @@ export const NumbersSection = () => {
                         <p>Years</p>
                     </div>
                 </div>
-                <div className="flex gap-3 justify-center items-center bg-white p-3 pr-16 rounded-2xl">
+                <div className="flex gap-3 justify-center items-center bg-white p-3 pr-16 rounded-2xl max-[430px]:w-[60%]">
                     <div className="p-3 bg-[#ff9e0c]  rounded-xl">
                         <IoCarOutline className="text-white bg-[#ff9e0c] text-4xl " />
                     </div>

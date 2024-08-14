@@ -3,11 +3,12 @@ import memory from '../../../assets/img/Audi-Rental-Car-near-me.jpeg'
 
 
 export const MemoriesSection = () => {
+ 
 
     return (
-        <div className="mx-28 p-5 flex gap-10 items-center">
-            <div className="flex flex-col gap-12 w-[60%]">
-                <h1 className="text-5xl font-bold w-[80%]">Unlock unforgetable memorieson the road</h1>
+        <div className="lg:mx-28 p-5 flex max-[430px]:flex-col gap-10 items-center">
+            <div className="flex flex-col gap-12 lg:w-[60%]">
+                <h1 className="text-5xl font-bold lg:w-[80%]">Unlock unforgetable memorieson the road</h1>
                 <p className="text-[#d8d8d8]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nostrum quibusdam eaque
                     adipisci nesciunt incidunt doloribus natus accusamus! Aspernatur quae
                     dignissimos ipsum facere laborum voluptatibus enim totam necessitatibus ullam ducimus?</p>
@@ -46,7 +47,7 @@ export const MemoriesSection = () => {
                     </div>
                 </div>
             </div>
-            <div className=" p-4 flex justify-center items-center w-[50%] h-[80%]">
+            <div className=" p-4 flex justify-center items-center w-[50%] h-[80%] max-[430px]:hidden">
                 <img className="rounded-3xl " src={memory} alt="" srcset="" />
             </div>
         </div>
