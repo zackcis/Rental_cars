@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaCar } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaSquarePhone } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 
@@ -13,12 +13,19 @@ import { FaBars } from "react-icons/fa";
 
 
 export const Header = () => {
-    const [sidebaropened ,setSidebaropened] = useState(false)
-    const clickonbar = ()=>{
+    const [sidebaropened, setSidebaropened] = useState(false)
+    const clickonbar = () => {
         setSidebaropened(!sidebaropened)
     }
 
+    const location = useLocation();
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        // console.log("larbi");
+    }, [location.pathname]);
+    
+    
 
     return (
         <div className="flex justify-between items-center px-1 lg:px-20 my-6 relative">
@@ -30,8 +37,8 @@ export const Header = () => {
                 <h3 className="font-bold">InnovaCars</h3>
             </div>
 
-            <div className={`bg-white flex max-[430px]:flex-col justify-around z-50 lg:w-[45%] max-[430px]:w-[100%]  items-center max-[430px]:absolute max-[430px]:top-14 ${!sidebaropened ? 'max-[430px]:hidden' : null }`}>
-    
+            <div className={`bg-white flex max-[430px]:flex-col justify-around z-50 lg:w-[45%] max-[430px]:w-[100%]  items-center max-[430px]:absolute max-[430px]:top-14 ${!sidebaropened ? 'max-[430px]:hidden' : null}`}>
+
                 <Link onClick={clickonbar} className="max-[430px]:border-black max-[430px]:border-2 max-[430px]:w-[100%] max-[430px]:p-3 " to="/">Home</Link>
                 <Link onClick={clickonbar} className="max-[430px]:border-black max-[430px]:border-2 max-[430px]:w-[100%] max-[430px]:p-3 " to="/vehicles">Vehicles</Link>
                 <Link onClick={clickonbar} className="max-[430px]:border-black max-[430px]:border-2 max-[430px]:w-[100%] max-[430px]:p-3 " to="/aboutus">aboutus</Link>
